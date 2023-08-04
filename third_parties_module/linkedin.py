@@ -16,7 +16,7 @@ def linkedin_scraper(profile_url: str):
 
     
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
-    api_key = "arpi-phkl2hzzWrMN7JGvg"
+    api_key = "arpi-xxxx2hzzWrxxxxxxx"
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {'url': profile_url  }
 
