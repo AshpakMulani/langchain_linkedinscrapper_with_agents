@@ -3,7 +3,7 @@ import requests
 import json
 
 
-def linkedin_scraper(profile_url: str):
+def linkedin_scraper(profile_url: str) -> dict:
     """
     scraping info directly from linked-in has its own complexity, so we can use third party
     proxy services whihc makes it easier to scrape the info from linkedin.
@@ -16,7 +16,7 @@ def linkedin_scraper(profile_url: str):
 
     
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
-    api_key = "arpi-xxxx2hzzWrxxxxxxx"
+    api_key = "arpi-phkl2hzzWrMN7JGvg"
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {'url': profile_url  }
 
@@ -25,4 +25,4 @@ def linkedin_scraper(profile_url: str):
     #print(response._content)
 
 
-    return response._content
+    return response.json()
